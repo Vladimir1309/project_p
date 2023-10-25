@@ -1,16 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <NavComp/>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import NavComp from './components/Navigation.vue'
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+ components: {
+  NavComp
+ }
 }
 </script>
 
@@ -20,7 +24,15 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  /* color: #2c3e50; */
+  color: whitesmoke;
+}
+
+.container {
+  background-color: coral;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
 </style>
